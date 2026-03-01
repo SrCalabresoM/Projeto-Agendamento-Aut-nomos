@@ -22,7 +22,7 @@ import Agendamento from "../features/public/Agendamento.jsx";
       <Route path="/a/:username" element={<PaginaPublica />} />
       <Route path="/criar" element={<Criar />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/agenda" element={<Agendamento />} />
+      <Route path="/agenda/:username" element={<Agendamento />} />
       
 
     </Routes>

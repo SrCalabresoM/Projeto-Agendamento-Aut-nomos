@@ -1,1 +1,61 @@
 @import "tailwindcss";
+/* esconder aquea barra chata*/
+.fc-timeGridWeek-view .fc-timegrid-slot-label-cushion,
+.fc-timeGridWeek-view .fc-timegrid-axis-cushion {
+  display: none;
+}
+/*CSS PARA MELHORAR O FULLCALENDAR, FEITO PELO GPT*/
+  /* ===== CONTAINER ===== */
+  .fc {
+    @apply bg-white rounded-2xl shadow-xl p-4;
+  }
+
+  /* ===== HEADER ===== */
+  .fc .fc-toolbar-title {
+    @apply text-2xl font-semibold text-gray-800;
+  }
+
+  .fc .fc-button {
+    @apply bg-gray-100 text-gray-700 border-none rounded-lg px-3 py-2 
+          hover:bg-blue-500 hover:text-white transition;
+  }
+
+  .fc .fc-button-primary:not(:disabled).fc-button-active {
+    @apply bg-blue-500 text-white;
+  }
+
+  /* ===== GRID ===== */
+  .fc .fc-timegrid-slot {
+    @apply border-gray-100;
+  }
+
+  .fc .fc-timegrid-axis {
+    @apply text-gray-500 text-sm;
+  }
+
+  .fc .fc-col-header-cell {
+    @apply bg-gray-50 text-gray-700 font-medium py-2;
+  }
+
+  /* ===== EVENTS ===== */
+  .fc .fc-event {
+    @apply rounded-lg border-none shadow-sm font-medium text-sm px-1;
+  }
+
+  .fc .fc-event:hover {
+    @apply scale-[1.02] shadow-md transition;
+  }
+
+  /* ===== TODAY HIGHLIGHT ===== */
+  .fc .fc-day-today {
+    @apply bg-orange-50;
+  }
+
+  /* ===== SCROLLBAR CLEAN ===== */
+  .fc-scroller::-webkit-scrollbar {
+    width: 6px;
+  }
+  .fc-scroller::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 6px;
+  }
