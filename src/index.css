@@ -1,4 +1,6 @@
 @import "tailwindcss";
+
+
 /* esconder aquea barra chata*/
 .fc-timeGridWeek-view .fc-timegrid-slot-label-cushion,
 .fc-timeGridWeek-view .fc-timegrid-axis-cushion {
@@ -39,10 +41,14 @@
 
   /* ===== EVENTS ===== */
   .fc .fc-event {
-    @apply rounded-lg border-none shadow-sm font-medium text-sm px-1;
+    @apply shadow-sm font-medium text-sm px-1;
   }
 
-  .fc .fc-event:hover {
+  .fc .fc-event:not(.evento-bloqueado) {
+    @apply rounded-lg;
+  }
+
+  .fc .fc-event:not(.evento-bloqueado):hover {
     @apply scale-[1.02] shadow-md transition;
   }
 
@@ -59,3 +65,27 @@
     background: #e5e7eb;
     border-radius: 6px;
   }
+  .fc-dia-passado {
+    position: relative;
+  }
+
+  .fc-dia-passado::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.36);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .fc-dia-passado .fc-event {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .fc-dia-passado .fc-event:hover {
+    opacity: 0.4;
+  }
+  .evento-passado {
+    opacity: 0.27;
+    pointer-events: none;
+  }
+  
